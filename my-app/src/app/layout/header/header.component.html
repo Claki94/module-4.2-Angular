@@ -1,0 +1,18 @@
+<header>
+  <mat-toolbar color="primary">
+    <div class="logo-title">
+      <img src="assets/logo.svg" alt="website logo" class="logo" />
+      <span>My app</span>
+    </div>
+    <nav class="routes">
+      <a
+        class="route"
+        *ngFor="let route of routes"
+        [routerLink]="route.path"
+        routerLinkActive="active"
+      >
+        {{ route.name | titlecase }}
+      </a>
+    </nav>
+  </mat-toolbar>
+</header>

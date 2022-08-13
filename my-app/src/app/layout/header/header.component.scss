@@ -1,0 +1,29 @@
+.mat-toolbar-single-row {
+  justify-content: space-between;
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .routes {
+    display: flex;
+    align-self: stretch;
+
+    .route {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .active {
+      background-color: white;
+      color: black;
+    }
+  }
+}

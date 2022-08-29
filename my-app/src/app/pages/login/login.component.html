@@ -1,1 +1,46 @@
-<p>login works!</p>
+<div class="login-container">
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="loginForm" class="login-form">
+        <div>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="example@email.com"
+              type="text"
+            />
+          </mat-form-field>
+          <app-form-errors
+            [formGroup]="loginForm"
+            field="email"
+          ></app-form-errors>
+        </div>
+
+        <div>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput type="password" />
+          </mat-form-field>
+          <app-form-errors
+            [formGroup]="loginForm"
+            field="password"
+          ></app-form-errors>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        [disabled]="loginForm.invalid"
+        (click)="login()"
+      >
+        Submit
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

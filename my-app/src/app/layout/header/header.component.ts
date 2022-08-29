@@ -33,10 +33,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log(this._publicRoutes);
     const sub = this._authService.isLogged.subscribe((value) =>
       this.createMenuLinks(value)
     );
+
     this._subscriptions.push(sub);
   }
 

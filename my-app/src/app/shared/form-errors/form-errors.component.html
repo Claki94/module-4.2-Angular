@@ -1,0 +1,14 @@
+<div
+  *ngIf="
+    formGroup.get(field)?.invalid &&
+    formGroup.get(field)?.errors &&
+    (formGroup.get(field)?.dirty || formGroup.get(field)?.touched)
+  "
+>
+  <mat-error *ngIf="formGroup.get(field)?.hasError('required')">
+    This field is required
+  </mat-error>
+  <mat-error *ngIf="formGroup.get(field)?.hasError('email')">
+    This field must be an email
+  </mat-error>
+</div>

@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '../app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormErrorsComponent } from './form-errors/form-errors.component';
 
 @NgModule({
-  declarations: [],
-  imports: [],
+  declarations: [FormErrorsComponent],
+  imports: [CommonModule, AngularMaterialModule],
   exports: [
+    FormErrorsComponent,
     AngularMaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,

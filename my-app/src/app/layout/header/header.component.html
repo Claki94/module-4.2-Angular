@@ -13,6 +13,18 @@
       >
         {{ route.name | titlecase }}
       </a>
+      <div *ngIf="isLogged" class="auth-container">
+        <span class="username">Hi, {{ username }}</span>
+        <button mat-icon-button (click)="logout()">
+          <mat-icon
+            matTooltip="Logout"
+            matTooltipPosition="left"
+            aria-hidden="false"
+            aria-label="Exit door for logout purpose"
+            fontIcon="exit_to_app"
+          ></mat-icon>
+        </button>
+      </div>
     </nav>
   </mat-toolbar>
 </header>

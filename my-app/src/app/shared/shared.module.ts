@@ -6,9 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from '../app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormErrorsComponent } from './form-errors/form-errors.component';
+import { LoadSpinnerComponent } from './load-spinner/load-spinner.component';
 
 @NgModule({
-  declarations: [FormErrorsComponent],
+  declarations: [FormErrorsComponent, LoadSpinnerComponent],
   imports: [CommonModule, AngularMaterialModule],
   exports: [
     FormErrorsComponent,
@@ -18,6 +19,7 @@ import { FormErrorsComponent } from './form-errors/form-errors.component';
     BrowserModule,
     CommonModule,
     ReactiveFormsModule,
+    LoadSpinnerComponent,
   ],
 })
 export class SharedModule {}

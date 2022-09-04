@@ -25,5 +25,15 @@
       background-color: white;
       color: black;
     }
+
+    .auth-container {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+
+      .username {
+        font-size: 0.65em;
+      }
+    }
   }
 }
